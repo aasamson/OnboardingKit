@@ -168,8 +168,11 @@ extension OnboardingView : UICollectionViewDataSource, UICollectionViewDelegate,
         let cell = collection.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! OnboardingCell
     
         cell.image.image = UIImage(named: onboardingImages[indexPath.row])
+        cell.headerLabel.text = "Test"
+        cell.subHeaderLabel.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         
-        
+        cell.setHeaderLabel(font: "Helvetica-Bold", size: 30, color: UIColor.black)
+        cell.setSubHeaderLabel(font: "Helvetica", size: 18, color: UIColor.gray)
         
         return cell
     }
